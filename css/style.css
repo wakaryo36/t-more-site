@@ -10,6 +10,13 @@ body {
     background-color: #111;        /* 真っ黒にしない */
     color: #e5e5e5;                /* 少しグレー寄り */
     line-height: 1.7;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -443,23 +450,32 @@ body.no-scroll {
 
     .hamburger {
         display: block;
-        z-index: 1001;
+        z-index: 1000;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 2px;
+        background: #e5e5e5;
+        margin: 6px 0;
+        transition: 0.3s;
     }
 
     .nav {
         position: fixed;
-        top: 64px;
+        top: 0;
         right: 0;
-        width: 60%;
-        max-width: 280px;
-        height: calc(100vh - 64px);
-        background: rgba(13, 13, 13, 0.95);
-        backdrop-filter: blur(8px);
+        width: min(70vw, 280px);
+        height: 100vh;
+        background: #111;
         display: flex;
         flex-direction: column;
-        padding: 80px 24px;
-        transform: translateX(100%);
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
         transition: transform 0.3s ease;
+        transform: translateX(100%);
+        z-index: 999;
     }
 
     .nav.show {
