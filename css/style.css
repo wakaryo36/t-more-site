@@ -326,6 +326,11 @@ footer p {
     font-weight: 600;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 .nav a{
     color: #cfcfcf;
     text-decoration: none;
@@ -420,20 +425,6 @@ body.no-scroll {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .menu-grid{ grid-template-columns: 1fr; }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .access-row {
-        flex-direction: column;
-        gap: 6px;
-    }
 
     .hamburger {
         display: block;
@@ -449,8 +440,10 @@ body.no-scroll {
         height: calc(100vh - 64px);
         background: rgba(13, 13, 13, 0.95);
         backdrop-filter: blur(8px);
+
         display: flex;
         flex-direction: column;
+
         padding: 80px 24px;
         transition: 0.3s;
     }
