@@ -16,7 +16,14 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo" href="index.html">T-more</a>
-            <nav class="nav">
+
+            <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
                 <a href="menu.html">Menu</a>
                 <a href="access.html">Access</a>
             </nav>
@@ -24,7 +31,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero fade-in">
         <div class="hero-content">
             <p class="hero-eyebrow">Shisha bar</p>
             <h1>T-more</h1>
@@ -34,7 +41,7 @@
     </section>
 
     <!-- Concept -->
-    <section class="concept">
+    <section class="concept fade-in">
     <h2>Concept</h2>
     <p>
         仕事終わりにふらっと立ち寄れる、
@@ -43,17 +50,17 @@
     </section>
 
     <!-- Gallery -->
-    <section class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-        <img src="images/hero.jpg" alt="店内写真">
-        <img src="images/shisha.jpg" alt="シーシャ写真">
-        <img src="images/counter.jpg" alt="カウンター">
-    </div>
+    <section class="gallery fade-in">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/hero.jpg" alt="店内写真" class="gallery-item">
+            <img src="images/shisha.jpg" alt="シーシャ写真" class="gallery-item">
+            <img src="images/counter.jpg" alt="カウンター" class="gallery-item">
+        </div>
     </section>
 
     <!-- Access -->
-    <section class="access">
+    <section class="access fade-in">
         <h2>Access</h2>
         <div class="access-card">
             <div class="access-row">
@@ -100,6 +107,13 @@
         <p>&copy; 2026 Shisha Bar Sample</p>
         </div>
     </footer>
+
+    <div class="modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-img" id="modalImg" src="" alt="">
+    </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

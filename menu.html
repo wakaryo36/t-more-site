@@ -12,19 +12,26 @@
     <header class="site-header">
         <div class="header-inner">
             <a class="logo" href="index.html">T-more</a>
-            <nav class="nav">
+
+            <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
                 <a href="menu.html" class="active">Menu</a>
                 <a href="access.html">Access</a>
             </nav>
         </div>
     </header>
 
-    <section class="concept">
+    <section class="concept fade-in">
         <h2>Menu</h2>
         <p>料金とメニューをご案内します。</p>
     </section>
 
-    <section class="menu">
+    <section class="menu fade-in">
         <h2>Price</h2>
         <ul>
         <li>シーシャ（2時間） ¥3,000〜4,000</li>
@@ -33,7 +40,7 @@
         </ul>
     </section>
 
-    <section class="menu">
+    <section class="menu fade-in">
         <h2>Menu</h2>
 
     <div class="menu-grid">
@@ -80,6 +87,8 @@
         <p>&copy; 2026 Shisha Bar Sample</p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
