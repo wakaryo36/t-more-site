@@ -195,14 +195,14 @@ section {
     margin-top: 20px;
 }
 
-.gallery img {
+.gallery-grid img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     transition: 0.3s;
 }
 
-.gallery img:hover {
+.gallery-grid img:hover {
     transform: scale(1.05);
 }
 
@@ -300,7 +300,6 @@ footer p {
     color: #888;
 }
 
-/* ===== Header / Nav ===== */
 .site-header{
     position: sticky;
     top: 0;
@@ -360,36 +359,6 @@ footer p {
     transform: translateY(0);
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.modal.show {
-    display: flex;
-}
-
-.modal-img {
-    max-width: 90%;
-    max-height: 80vh;
-    border-radius: 12px;
-}
-
-.modal-close {
-    position: absolute;
-    top: 24px;
-    right: 32px;
-    font-size: 36px;
-    color: #fff;
-    cursor: pointer;
-}
-
 .hamburger {
     display: none;
     width: 32px;
@@ -419,12 +388,58 @@ footer p {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+html.no-scroll,
 body.no-scroll {
     overflow: hidden;
+    height: 100%;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+        width: 100%;
+    }
+
+    .menu-list li {
+        align-items: flex-start;
+    }
+
+    .menu-list span {
+        word-break: keep-all;
+    }
+
+    .menu-list strong {
+        white-space: nowrap;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img:hover {
+        transform: none;
+    }
+
+    .access-row {
+        flex-direction: column;
+        gap: 6px;
+    }
 
     .hamburger {
         display: block;
@@ -440,12 +455,9 @@ body.no-scroll {
         height: calc(100vh - 64px);
         background: rgba(13, 13, 13, 0.95);
         backdrop-filter: blur(8px);
-
         display: flex;
         flex-direction: column;
-
         padding: 80px 24px;
-
         transform: translateX(100%);
         transition: transform 0.3s ease;
     }
