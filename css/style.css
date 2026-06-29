@@ -91,6 +91,12 @@ section {
     color: #d6d6d6;
 }
 
+.hero-menu {
+    background:
+        linear-gradient(to right, rgba(0,0,0,.65), rgba(0,0,0,.25)),
+        url("../images/flavor-bg.jpg");
+}
+
 .price-badge{
     display: inline-block;
     margin-top: 22px;
@@ -107,91 +113,88 @@ section {
 
 /* ===== Concept ===== */
 .concept {
-    text-align: center;
+    padding: 60px 20px 40px;
 }
 
 /* ===== Menu ===== */
-.menu ul {
-    list-style: none;
-    margin-top: 20px;
+.menu {
+    padding-top: 40px;
 }
 
-.menu li {
-    padding: 12px 0;
-    border-bottom: 1px solid #333;
+.menu-description{
+    text-align:center;
+    color:#bdbdbd;
+    margin-top:10px;
+    margin-bottom:50px;
 }
 
-/* ===== Menu Cards ===== */
-.menu-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 24px;
+.menu-section{
+
+    background:#181818;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:16px;
+
+    padding:28px;
+
+    margin-bottom:50px;
+
+    transition:.3s;
+
 }
 
-.menu-card{
-    background: rgba(255,255,255,0.03);
-    border: 1px solid #222;
-    border-radius: 14px;
-    padding: 18px 16px;
-    box-shadow: 0 0 24px rgba(167,139,250,0.06);
+.menu-section img{
+
+    border-radius:16px;
+
+    transition:.4s;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.45);
+
 }
 
-.menu-card h3{
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    color: #eaeaea;
+.menu-section img:hover{
+
+    transform:scale(1.02);
+
 }
 
-.menu-list{
-    list-style: none;
+.menu-section:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+
 }
 
-.menu-list li{
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid #222;
+.menu-section h3{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+    color:#fff;
+
 }
 
-.menu-list li:last-child{
-    border-bottom: none;
+.menu-section p{
+
+    color:#aaa;
+
+    margin-bottom:20px;
+
 }
 
-.menu-list span{
-    color: #d2d2d2;
-}
+.menu-section img{
 
-.menu-list strong{
-    color: #a78bfa;
-    font-weight: 700;
-    white-space: nowrap;
-}
+    width:100%;
 
-.menu-note{
-    margin-top: 12px;
-    font-size: 12px;
-    color: #9a9a9a;
-}
+    border-radius:12px;
 
-/* Tag style */
-.tag-list{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 6px;
-}
+    display:block;
 
-.tag{
-    padding: 8px 10px;
-    border: 1px solid rgba(167,139,250,0.35);
-    border-radius: 999px;
-    font-size: 12px;
-    color: #e5e5e5;
-    background: rgba(0,0,0,0.25);
 }
 
 /* ===== Gallery ===== */
@@ -275,6 +278,86 @@ section {
     height: 350px;
     display: block;
     border: none;
+}
+
+/* ===== Flavor ===== */
+.flavor-recommend {
+    padding-top: 40px;
+}
+
+.flavor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.flavor-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #262626;
+    border-radius: 16px;
+    padding: 24px 18px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.flavor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+.flavor-card h3 {
+    color: #a78bfa;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.flavor-card h3::before {
+    content: "●";
+    color: #a78bfa;
+    margin-right: 8px;
+}
+
+.flavor-card p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.flavor-note {
+    margin-top: 16px;
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+}
+
+.flavor-cta {
+    margin-top: 50px;
+    padding: 32px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #181818, #111);
+    border: 1px solid #2b2b2b;
+    border-radius: 16px;
+}
+
+.flavor-cta p {
+    color: #ddd;
+    margin-bottom: 18px;
+}
+
+.flavor-cta a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #111;
+    background: #a78bfa;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-flavor {
+    background:
+        linear-gradient(to right, rgba(0,0,0,.65), rgba(0,0,0,.25)),
+        url("../images/flavor-bg.jpg");
 }
 
 /* ===== Footer ===== */
@@ -415,24 +498,24 @@ body.no-scroll {
         font-size: 36px;
     }
 
-    .menu-grid {
+    .menu-section{
+        padding:18px;
+    }
+
+    .menu-section h3{
+        font-size:22px;
+    }
+
+    .menu-description{
+        margin-bottom:35px;
+    }
+
+    .flavor-grid {
         grid-template-columns: 1fr;
     }
 
-    .menu-card {
-        width: 100%;
-    }
-
-    .menu-list li {
-        align-items: flex-start;
-    }
-
-    .menu-list span {
-        word-break: keep-all;
-    }
-
-    .menu-list strong {
-        white-space: nowrap;
+    .flavor-card {
+        padding: 20px;
     }
 
     .gallery-grid {
