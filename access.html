@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access | T-more</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div class="header-inner">
             <a class="logo" href="index.html">T-more</a>
 
-            <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+            <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -24,12 +24,22 @@
                 <a href="index.html">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="flavor.html">Flavor Guide</a>
-                <a href="access.html" class="active">Access</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="access.html" class="active" aria-current="page">Access</a>
             </nav>
         </div>
     </header>
 
+    <section class="hero hero-access fade-in">
+        <div class="hero-content">
+            <p class="hero-eyebrow">T-more</p>
+            <h1>Access</h1>
+            <p class="hero-lead">生麦駅から徒歩1分。ご来店をお待ちしております。</p>
+        </div>
+    </section>
+
     <section class="access fade-in">
+        <p class="section-kicker">Visit us</p>
         <h2>Access</h2>
 
         <div class="access-card">
@@ -82,11 +92,11 @@
                 class="sns-icon">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <p>&copy; 2026 Shisha Bar Sample</p>
+            <p>&copy; 2026 T-more</p>
         </div>
     </footer>
 
-    <script src="js/script.js?v=5"></script>
+    <script src="js/script.js?v=7"></script>
 
 </body>
 </html>

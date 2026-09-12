@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=8">
 
     <!-- Font Awesome（Instagramアイコン用） -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,16 +18,17 @@
         <div class="header-inner">
             <a class="logo" href="index.html">T-more</a>
 
-            <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+            <button class="hamburger" id="hamburger" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
             <nav class="nav" id="nav">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html" class="active" aria-current="page">Home</a>
                 <a href="menu.html">Menu</a>
                 <a href="flavor.html">Flavor Guide</a>
+                <a href="gallery.html">Gallery</a>
                 <a href="access.html">Access</a>
             </nav>
         </div>
@@ -44,20 +45,35 @@
 
     <!-- Concept -->
     <section class="concept fade-in">
-    <h2>Concept</h2>
-    <p>
-        仕事終わりにふらっと立ち寄れる、
-        シーシャ好きのためのシーシャバー。
-    </p>
+        <p class="section-kicker">Our concept</p>
+        <h2>Concept</h2>
+        <p>
+            仕事終わりにふらっと立ち寄れる、<br class="desktop-break">
+            シーシャ好きのためのシーシャバー。
+        </p>
     </section>
 
     <!-- Gallery -->
     <section class="gallery fade-in">
+        <p class="section-kicker">A glimpse of T-more</p>
         <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="images/hero.jpg" alt="店内写真" class="gallery-item">
-            <img src="images/shisha.jpg" alt="シーシャ写真" class="gallery-item">
-            <img src="images/counter.jpg" alt="カウンター" class="gallery-item">
+        <p class="section-lead">店内の雰囲気と、丁寧に仕上げるシーシャをご覧ください。</p>
+        <div class="gallery-grid gallery-preview">
+            <button class="gallery-card gallery-card-shaded" type="button" data-gallery-item data-full="images/counter.jpg" data-alt="T-moreのカウンターに並ぶシーシャ">
+                <img src="images/counter.jpg" alt="T-moreのカウンターに並ぶシーシャ" class="gallery-item" loading="lazy">
+                <span class="gallery-card-label">Inside</span>
+            </button>
+            <button class="gallery-card gallery-card-shaded" type="button" data-gallery-item data-full="images/shisha.jpg" data-alt="店内に並ぶ色とりどりのシーシャフレーバー">
+                <img src="images/shisha.jpg" alt="店内に並ぶ色とりどりのシーシャフレーバー" class="gallery-item" loading="lazy">
+                <span class="gallery-card-label">Flavor</span>
+            </button>
+            <button class="gallery-card gallery-card-shaded" type="button" data-gallery-item data-full="images/1789078506998.jpg" data-alt="シーシャのボウルを仕上げる手元">
+                <img src="images/gallery-bowl-detail.jpg" alt="シーシャのボウルを仕上げる手元" class="gallery-item gallery-focus-hands" loading="lazy">
+                <span class="gallery-card-label">Shisha</span>
+            </button>
+        </div>
+        <div class="section-actions">
+            <a class="button-link" href="gallery.html">View Gallery</a>
         </div>
     </section>
 
@@ -109,7 +125,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js?v=5"></script>
+    <script src="js/script.js?v=7"></script>
 
 </body>
 </html>
